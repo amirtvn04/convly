@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@layer base {
+
+}
+
+@utility container {
+    @apply mx-auto px-7;
+}
+
+@theme {
+    --font-Montserrat: Montserrat;
+
+    --text-40: 2.5rem;
+}
+
+@layer components {
+    .item_filter {
+        @apply px-3.5 py-2 rounded-3xl;
+    }
+}

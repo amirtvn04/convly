@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>convly</title>
+</head>
+
+<body class="bg-[#f0f0f1] pt-12 font-Montserrat pl-80">
+    <div class="container text-xl ">
+
+        <!-- section 1 numbers -->
+        <div class="grid grid-cols-3 gap-x-8">
+            <div class="h-35 bg-white rounded-xl p-7.5">
+                <h5 class="text-gray-500 font-semibold">Lead Numbers</h5>
+                <div class="flex justify-between items-center mt-2.5">
+                    <span class="text-40 font-bold">126</span>
+                    <span class="text-lg font-semibold text-green-600 bg-green-100 rounded-3xl px-3.5 py-1">+ 10%</span>
+                </div>
+            </div>
+            <div class="h-35 bg-white rounded-xl p-7.5">
+                <h5 class="text-gray-500 font-semibold">Lead Numbers</h5>
+                <div class="flex justify-between items-center mt-2.5">
+                    <span class="text-40 font-bold">126</span>
+                    <span class="text-lg font-semibold text-red-600 bg-red-100 rounded-3xl px-3.5 py-1">+ 10%</span>
+                </div>
+            </div>
+            <div class="h-35 bg-white rounded-xl p-7.5">
+                <h5 class="text-gray-500 font-semibold">Lead Numbers</h5>
+                <div class="flex justify-between items-center mt-2.5">
+                    <span class="text-40 font-bold">126</span>
+                    <span class="text-lg font-semibold text-green-600 bg-green-100 rounded-3xl px-3.5 py-1">+ 10%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- section 2 chart -->
+        <div class="rounded-xl bg-white mt-10 py-10 px-7.5 relative z-0">
+            <h5 class="text-3xl font-bold">Main Page</h5>
+
+            <div id="active-bg"
+                class="absolute top-0 left-0 h-full rounded-3xl bg-gray-100 transition-all duration-300 -z-10"></div>
+
+            <div id="time-filter"
+                class="text-base flex items-center gap-x-7.5 mt-6.5 font-medium text-gray-500 *:cursor-pointer">
+                <span class="item_filter font-semibold text-black">12 months</span>
+                <span class="item_filter">3 months</span>
+                <span class="item_filter">30 days</span>
+                <span class="item_filter">7 days</span>
+                <span class="item_filter">24 hours</span>
+            </div>
+
+            <div id="chart" class="mt-5"></div>
+        </div>
+
+        <!-- section 3 pages -->
+        <div>
+            <div class="rounded-xl bg-white mt-10 py-10 px-7.5 mb-40">
+                <h5 class="text-3xl font-bold">All Pages</h5>
+                <table class="mt-8 w-full table-auto divide-y divide-gray-200">
+                    <thead class="text-sm text-left">
+                        <tr class="*:font-medium *:py-4">
+                            <th>Status</th>
+                            <th>Page Name</th>
+                            <th>Unique Visitors</th>
+                            <th>Button Clicks</th>
+                            <th>Conversion Rate</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-base font-semibold divide-y divide-gray-200">
+                        <tr class="*:py-5">
+                            <td></td>
+                            <td>Academy</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>80%</td>
+                            <td>Details</td>
+                        </tr>
+                        <tr class="*:py-5">
+                            <td></td>
+                            <td>Academy</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>80%</td>
+                            <td>Details</td>
+                        </tr>
+                        <tr class="*:py-5">
+                            <td></td>
+                            <td>Academy</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>80%</td>
+                            <td>Details</td>
+                        </tr>
+                        <tr class="*:py-5">
+                            <td></td>
+                            <td>Academy</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>80%</td>
+                            <td>Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="js/apexcharts.js"></script>
+
+<script>
+    var options = {
+        series: [{
+            name: 'Viwe',
+            data: [31, 40, 28, 51, 42, 109, 100]
+        }, {
+            name: 'Click',
+            data: [11, 32, 45, 32, 34, 52, 41]
+        }],
+        chart: {
+            height: 350,
+            type: 'area',
+            toolbar: {
+                show: false
+            },
+            fontFamily: 'Montserrat'
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        xaxis: {
+            type: 'datetime',
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+        },
+        tooltip: {
+            x: {
+                format: 'dd/MM/yy HH:mm'
+            },
+        },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+</script>
+
+<script>
+    const container = document.getElementById("time-filter");
+    const bg = document.getElementById("active-bg");
+    const buttons = container.querySelectorAll(".item_filter");
+
+    function moveBackgroundTo(el) {
+        const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = el;
+        bg.style.width = `${offsetWidth}px`;
+        bg.style.height = `${offsetHeight}px`;
+        bg.style.transform = `translateX(${offsetLeft}px) translateY(${offsetTop}px)`;
+    }
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            buttons.forEach(b => b.classList.remove("text-black", "font-semibold"));
+            btn.classList.add("text-black", "font-semibold");
+            moveBackgroundTo(btn);
+        });
+    });
+
+    window.addEventListener("load", () => {
+        const first = buttons[0];
+        moveBackgroundTo(first);
+    });
+
+    //   ----------------------------------
+
+    window.addEventListener("load", () => {
+        const first = buttons[0];
+        bg.classList.remove("transition-all", "duration-300");
+
+        moveBackgroundTo(first);
+
+        requestAnimationFrame(() => {
+            bg.classList.add("transition-all", "duration-300");
+        });
+    });
+
+</script>
+
+
+</html>
