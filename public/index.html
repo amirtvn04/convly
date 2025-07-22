@@ -13,27 +13,28 @@
 
         <!-- section 1 numbers -->
         <div class="grid grid-cols-3 gap-x-8">
-            <div class="h-35 bg-white rounded-xl p-7.5">
-                <h5 class="text-gray-500 font-semibold">Lead Numbers</h5>
+            <div id="card1" class="h-35 bg-white rounded-xl p-7.5 loading-card">
+                <h5 class="skeleton loading-text text-gray-500 font-semibold"></h5>
                 <div class="flex justify-between items-center mt-2.5">
-                    <span class="text-40 font-bold">126</span>
-                    <span class="text-lg font-semibold text-green-600 bg-green-100 rounded-3xl px-3.5 py-1">+ 10%</span>
+                    <span class="skeleton loading-number w-20"></span>
+                    <span class="skeleton loading-badge"></span>
                 </div>
             </div>
-            <div class="h-35 bg-white rounded-xl p-7.5">
-                <h5 class="text-gray-500 font-semibold">Lead Numbers</h5>
+            <div id="card2" class="h-35 bg-white rounded-xl p-7.5 loading-card">
+                <h5 class="skeleton loading-text text-gray-500 font-semibold"></h5>
                 <div class="flex justify-between items-center mt-2.5">
-                    <span class="text-40 font-bold">126</span>
-                    <span class="text-lg font-semibold text-red-600 bg-red-100 rounded-3xl px-3.5 py-1">+ 10%</span>
+                    <span class="skeleton loading-number w-20"></span>
+                    <span class="skeleton loading-badge"></span>
                 </div>
             </div>
-            <div class="h-35 bg-white rounded-xl p-7.5">
-                <h5 class="text-gray-500 font-semibold">Lead Numbers</h5>
+            <div id="card3" class="h-35 bg-white rounded-xl p-7.5 loading-card">
+                <h5 class="skeleton loading-text text-gray-500 font-semibold"></h5>
                 <div class="flex justify-between items-center mt-2.5">
-                    <span class="text-40 font-bold">126</span>
-                    <span class="text-lg font-semibold text-green-600 bg-green-100 rounded-3xl px-3.5 py-1">+ 10%</span>
+                    <span class="skeleton loading-number w-20"></span>
+                    <span class="skeleton loading-badge"></span>
                 </div>
             </div>
+
         </div>
 
         <!-- section 2 chart -->
@@ -192,5 +193,67 @@
 
 </script>
 
+ <script>
+        // شبیه‌سازی بارگذاری داده‌ها
+        const loadData = {
+            card1: () => ({
+                title: "Lead Numbers",
+                number: "126",
+                change: "+ 10%",
+                changeType: "positive"
+            }),
+            card2: () => ({
+                title: "Click Numbers",
+                number: "68%",
+                change: "- 2%",
+                changeType: "negative"
+            }),
+            card3: () => ({
+                title: "View Numbers",
+                number: "540K",
+                change: "+ 15%",
+                changeType: "positive"
+            }),
+            chart: () => ({
+                title: "صفحه اصلی",
+                filters: ["12 ماه", "3 ماه", "30 روز", "7 روز", "24 ساعت"]
+            }),
+            table: () => ({
+                title: "همه صفحات",
+                data: [
+                    { status: "فعال", name: "آکادمی", visitors: "5", clicks: "4", conversion: "80%", action: "جزئیات" },
+                    { status: "فعال", name: "وبلاگ", visitors: "12", clicks: "8", conversion: "67%", action: "جزئیات" },
+                    { status: "غیرفعال", name: "محصولات", visitors: "25", clicks: "15", conversion: "60%", action: "جزئیات" },
+                    { status: "فعال", name: "تماس با ما", visitors: "8", clicks: "6", conversion: "75%", action: "جزئیات" }
+                ]
+            })
+        };
+
+        // تابع بارگذاری کارت
+        function loadCard(cardId, data) {
+            const card = document.getElementById(cardId);
+            const changeClass = data.changeType === 'positive' ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100';
+            
+            card.innerHTML = `
+                <h5 class="text-gray-500 font-semibold">${data.title}</h5>
+                <div class="flex justify-between items-center mt-2.5">
+                    <span class="text-40 font-bold">${data.number}</span>
+                    <span class="text-lg font-semibold ${changeClass} rounded-3xl px-3.5 py-1">${data.change}</span>
+                </div>
+            `;
+            
+            card.classList.remove('loading-card');
+            card.classList.add('fade-in');
+        }
+
+   
+        // شبیه‌سازی بارگذاری با تاخیرهای مختلف
+        setTimeout(() => loadCard('card1', loadData.card1()), 1000);
+        setTimeout(() => loadCard('card2', loadData.card2()), 2500);
+        setTimeout(() => loadCard('card3', loadData.card3()), 2000);
+        setTimeout(() => loadChart(loadData.chart()), 2500);
+        setTimeout(() => loadTable(loadData.table()), 3000);
+
+    </script>
 
 </html>
