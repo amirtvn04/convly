@@ -18,51 +18,27 @@
         @apply px-3.5 py-2 rounded-3xl;
     }
 
-    .fade-in {
-        animation: fadeIn 0.5s ease-in-out;
+    .item_filter.active {
+        @apply font-semibold text-black;
     }
+
+    .fade-in {
+        animation: fadeIn 0.17s ease-in-out;
+        -webkit-animation: fadeIn 0.17s ease-in-out;
+}
 
     @keyframes fadeIn {
         from {
             opacity: 0;
-            transform: translateY(20px);
         }
 
         to {
             opacity: 1;
-            transform: translateY(0);
         }
-    }
-
-    .loading-card {
-        background-color: #f9fafb;
-    }
-
-    .loading-text {
-        height: 20px;
-        border-radius: 4px;
-    }
-
-    .loading-number {
-        height: 40px;
-        border-radius: 8px;
-    }
-
-    .loading-badge {
-        height: 32px;
-        width: 80px;
-        border-radius: 16px;
     }
 
     .skeleton {
-        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-        background-size: 200% 100%;
-        animation: loading 1.5s infinite;
+        @apply animate-pulse bg-gray-300 rounded-sm;
     }
-    
-            @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
 
 }

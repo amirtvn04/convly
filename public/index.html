@@ -11,189 +11,111 @@
 <body class="bg-[#f0f0f1] pt-12 font-Montserrat pl-80">
     <div class="container text-xl ">
 
-        <!-- section 1 numbers -->
+        <!-- section 1 cards -->
         <div class="grid grid-cols-3 gap-x-8">
-            <div id="card1" class="h-35 bg-white rounded-xl p-7.5 loading-card">
-                <h5 class="skeleton loading-text text-gray-500 font-semibold"></h5>
+            <div id="card1" class="h-35 bg-white rounded-xl p-7.5">
+                <div class="skeleton h-7 w-44 mb-4 "></div>
                 <div class="flex justify-between items-center mt-2.5">
-                    <span class="skeleton loading-number w-20"></span>
-                    <span class="skeleton loading-badge"></span>
+                    <span class="skeleton w-22 h-10"></span>
+                    <span class="skeleton h-10 w-20"></span>
                 </div>
             </div>
-            <div id="card2" class="h-35 bg-white rounded-xl p-7.5 loading-card">
-                <h5 class="skeleton loading-text text-gray-500 font-semibold"></h5>
+            <div id="card2" class="h-35 bg-white rounded-xl p-7.5">
+                <div class="skeleton h-7 w-44 mb-4 "></div>
                 <div class="flex justify-between items-center mt-2.5">
-                    <span class="skeleton loading-number w-20"></span>
-                    <span class="skeleton loading-badge"></span>
+                    <span class="skeleton w-22 h-10"></span>
+                    <span class="skeleton h-10 w-20"></span>
                 </div>
             </div>
-            <div id="card3" class="h-35 bg-white rounded-xl p-7.5 loading-card">
-                <h5 class="skeleton loading-text text-gray-500 font-semibold"></h5>
+            <div id="card3" class="h-35 bg-white rounded-xl p-7.5">
+                <div class="skeleton h-7 w-44 mb-4 "></div>
                 <div class="flex justify-between items-center mt-2.5">
-                    <span class="skeleton loading-number w-20"></span>
-                    <span class="skeleton loading-badge"></span>
+                    <span class="skeleton w-22 h-10"></span>
+                    <span class="skeleton h-10 w-20"></span>
                 </div>
             </div>
+
 
         </div>
 
         <!-- section 2 chart -->
-        <div class="rounded-xl bg-white mt-10 py-10 px-7.5 relative z-0">
-            <h5 class="text-3xl font-bold">Main Page</h5>
+        <div id="chart-section" class="rounded-xl bg-white mt-10 py-10 px-7.5 relative z-0 h-[567]">
+            <div class="skeleton h-10 w-44 mb-6"></div>
 
-            <div id="active-bg"
-                class="absolute top-0 left-0 h-full rounded-3xl bg-gray-100 transition-all duration-300 -z-10"></div>
-
-            <div id="time-filter"
-                class="text-base flex items-center gap-x-7.5 mt-6.5 font-medium text-gray-500 *:cursor-pointer">
-                <span class="item_filter font-semibold text-black">12 months</span>
-                <span class="item_filter">3 months</span>
-                <span class="item_filter">30 days</span>
-                <span class="item_filter">7 days</span>
-                <span class="item_filter">24 hours</span>
+            <div class="flex items-center gap-x-7 mt-8 mb-9">
+                <div class="skeleton w-25 h-7"></div>
+                <div class="skeleton w-25 h-7"></div>
+                <div class="skeleton w-25 h-7"></div>
+                <div class="skeleton w-25 h-7"></div>
+                <div class="skeleton w-25 h-7"></div>
             </div>
 
-            <div id="chart" class="mt-5"></div>
+            <div class="skeleton h-87.5 w-full"></div>
         </div>
 
         <!-- section 3 pages -->
-        <div>
-            <div class="rounded-xl bg-white mt-10 py-10 px-7.5 mb-40">
-                <h5 class="text-3xl font-bold">All Pages</h5>
-                <table class="mt-8 w-full table-auto divide-y divide-gray-200">
-                    <thead class="text-sm text-left">
-                        <tr class="*:font-medium *:py-4">
-                            <th>Status</th>
-                            <th>Page Name</th>
-                            <th>Unique Visitors</th>
-                            <th>Button Clicks</th>
-                            <th>Conversion Rate</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-base font-semibold divide-y divide-gray-200">
-                        <tr class="*:py-5">
-                            <td></td>
-                            <td>Academy</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>80%</td>
-                            <td>Details</td>
-                        </tr>
-                        <tr class="*:py-5">
-                            <td></td>
-                            <td>Academy</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>80%</td>
-                            <td>Details</td>
-                        </tr>
-                        <tr class="*:py-5">
-                            <td></td>
-                            <td>Academy</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>80%</td>
-                            <td>Details</td>
-                        </tr>
-                        <tr class="*:py-5">
-                            <td></td>
-                            <td>Academy</td>
-                            <td>5</td>
-                            <td>4</td>
-                            <td>80%</td>
-                            <td>Details</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
+
+        <div id="table-section" class="rounded-xl bg-white mt-10 py-10 px-7.5 mb-40">
+            <div class="skeleton h-10 w-44 mb-8"></div>
+
+            <div class="space-y-4">
+                <!-- Table Header -->
+                <div class="flex justify-between items-center py-4 border-b border-gray-200">
+                    <div class="skeleton w-22 h-6"></div>
+                    <div class="skeleton w-22 h-6"></div>
+                    <div class="skeleton w-22 h-6"></div>
+                    <div class="skeleton w-22 h-6"></div>
+                    <div class="skeleton w-22 h-6"></div>
+                    <div class="skeleton w-22 h-6"></div>
+                </div>
+
+                <!-- Table Rows -->
+                <div class="space-y-5 divide-y divide-gray-200">
+                    <div class="flex justify-between items-center py-4">
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                    </div>
+                    <div class="flex justify-between items-center py-4">
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                    </div>
+                    <div class="flex justify-between items-center py-4">
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                    </div>
+                    <div class="flex justify-between items-center py-4">
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                        <div class="skeleton h-7 w-29"></div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 
-</body>
 
-<script src="js/apexcharts.js"></script>
 
-<script>
-    var options = {
-        series: [{
-            name: 'Viwe',
-            data: [31, 40, 28, 51, 42, 109, 100]
-        }, {
-            name: 'Click',
-            data: [11, 32, 45, 32, 34, 52, 41]
-        }],
-        chart: {
-            height: 350,
-            type: 'area',
-            toolbar: {
-                show: false
-            },
-            fontFamily: 'Montserrat'
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            curve: 'smooth'
-        },
-        xaxis: {
-            type: 'datetime',
-            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-        },
-        tooltip: {
-            x: {
-                format: 'dd/MM/yy HH:mm'
-            },
-        },
-    };
+    <script src="js/apexcharts.js"></script>
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-</script>
 
-<script>
-    const container = document.getElementById("time-filter");
-    const bg = document.getElementById("active-bg");
-    const buttons = container.querySelectorAll(".item_filter");
 
-    function moveBackgroundTo(el) {
-        const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = el;
-        bg.style.width = `${offsetWidth}px`;
-        bg.style.height = `${offsetHeight}px`;
-        bg.style.transform = `translateX(${offsetLeft}px) translateY(${offsetTop}px)`;
-    }
-
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            buttons.forEach(b => b.classList.remove("text-black", "font-semibold"));
-            btn.classList.add("text-black", "font-semibold");
-            moveBackgroundTo(btn);
-        });
-    });
-
-    window.addEventListener("load", () => {
-        const first = buttons[0];
-        moveBackgroundTo(first);
-    });
-
-    //   ----------------------------------
-
-    window.addEventListener("load", () => {
-        const first = buttons[0];
-        bg.classList.remove("transition-all", "duration-300");
-
-        moveBackgroundTo(first);
-
-        requestAnimationFrame(() => {
-            bg.classList.add("transition-all", "duration-300");
-        });
-    });
-
-</script>
-
- <script>
+    <script>
         // شبیه‌سازی بارگذاری داده‌ها
         const loadData = {
             card1: () => ({
@@ -215,25 +137,26 @@
                 changeType: "positive"
             }),
             chart: () => ({
-                title: "صفحه اصلی",
-                filters: ["12 ماه", "3 ماه", "30 روز", "7 روز", "24 ساعت"]
+                title: "Main Page",
+                filters: ["12 months", "3 months", "30 days", "7 days", "24 hours"]
             }),
             table: () => ({
-                title: "همه صفحات",
+                title: "All Pages",
                 data: [
-                    { status: "فعال", name: "آکادمی", visitors: "5", clicks: "4", conversion: "80%", action: "جزئیات" },
-                    { status: "فعال", name: "وبلاگ", visitors: "12", clicks: "8", conversion: "67%", action: "جزئیات" },
-                    { status: "غیرفعال", name: "محصولات", visitors: "25", clicks: "15", conversion: "60%", action: "جزئیات" },
-                    { status: "فعال", name: "تماس با ما", visitors: "8", clicks: "6", conversion: "75%", action: "جزئیات" }
+                    { status: "active", name: "Academy", visitors: "5", clicks: "4", conversion: "80%", action: "Details" },
+                    { status: "active", name: "weblog", visitors: "12", clicks: "8", conversion: "67%", action: "Details" },
+                    { status: "not_active", name: "about us", visitors: "25", clicks: "15", conversion: "60%", action: "Details" },
+                    { status: "active", name: "contact us", visitors: "8", clicks: "6", conversion: "75%", action: "Details" }
                 ]
             })
         };
 
-        // تابع بارگذاری کارت
+        //   ----------------------------------
+
         function loadCard(cardId, data) {
             const card = document.getElementById(cardId);
             const changeClass = data.changeType === 'positive' ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100';
-            
+
             card.innerHTML = `
                 <h5 class="text-gray-500 font-semibold">${data.title}</h5>
                 <div class="flex justify-between items-center mt-2.5">
@@ -241,19 +164,154 @@
                     <span class="text-lg font-semibold ${changeClass} rounded-3xl px-3.5 py-1">${data.change}</span>
                 </div>
             `;
-            
-            card.classList.remove('loading-card');
+
             card.classList.add('fade-in');
         }
 
-   
-        // شبیه‌سازی بارگذاری با تاخیرهای مختلف
+        //   ----------------------------------
+
+        var options = {
+            series: [{
+                name: 'Viwe',
+                data: [31, 40, 28, 51, 42, 109, 100]
+            }, {
+                name: 'Click',
+                data: [11, 32, 45, 32, 34, 52, 41]
+            }],
+            chart: {
+                height: 350,
+                type: 'area',
+                toolbar: {
+                    show: false
+                },
+                fontFamily: 'Montserrat'
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            xaxis: {
+                type: 'datetime',
+                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+            },
+            tooltip: {
+                x: {
+                    format: 'dd/MM/yy HH:mm'
+                },
+            },
+        };
+
+        //   ----------------------------------
+
+        function loadChart(data) {
+            const section = document.getElementById('chart-section');
+
+            section.innerHTML = `
+                <h5 class="text-3xl font-bold">${data.title}</h5>
+                
+                <div id="time-filter" class="text-base flex items-center gap-x-7 mt-6.5 font-medium text-gray-500">
+                    ${data.filters.map((filter, index) =>
+                `<span class="item_filter cursor-pointer ${index === 0 ? 'active' : ''}">${filter}</span>`
+            ).join('')}
+                </div>
+                
+            <div id="active-bg"
+                class="absolute top-0 left-0 h-full rounded-3xl bg-gray-100 transition-all duration-300 -z-10"></div>
+
+                <div id="chart" class="mt-5"></div>
+            `;
+
+            //   ----------------------------------
+
+            var chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+
+            //   ----------------------------------
+
+            const container = document.getElementById("time-filter");
+            const bg = document.getElementById("active-bg");
+            const buttons = container.querySelectorAll(".item_filter");
+
+            function moveBackgroundTo(el) {
+                const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = el;
+                bg.style.width = `${offsetWidth}px`;
+                bg.style.height = `${offsetHeight}px`;
+                bg.style.transform = `translateX(${offsetLeft}px) translateY(${offsetTop}px)`;
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    buttons.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+                    moveBackgroundTo(btn);
+                });
+            });
+
+            //   ----------------------------------
+
+            const first = buttons[0];
+            bg.classList.remove("transition-all", "duration-300");
+
+            moveBackgroundTo(first);
+
+            requestAnimationFrame(() => {
+                bg.classList.add("transition-all", "duration-300");
+            });
+
+            section.classList.add('fade-in');
+        }
+
+        //   ----------------------------------
+
+        function loadTable(data) {
+            const section = document.getElementById('table-section');
+
+            section.innerHTML = `
+                <h5 class="text-3xl font-bold">${data.title}</h5>
+                <table class="mt-8 w-full table-auto divide-y divide-gray-200">
+                    <thead class="text-sm text-left">
+                        <tr class="*:font-medium *:py-4">
+                            <th>Status</th>
+                            <th>Page Name</th>
+                            <th>Unique Visitors</th>
+                            <th>Button Clicks</th>
+                            <th>Conversion Rate</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-base font-semibold divide-y divide-gray-200">
+                        ${data.data.map(row => `
+                            <tr class="*:py-5">
+                                <td>
+                                    <span class="w-3 h-3 rounded-full ${row.status === 'active' ? 'bg-green-500' : 'bg-red-500'} inline-block"></span>
+                                </td>
+                                <td>${row.name}</td>
+                                <td>${row.visitors}</td>
+                                <td>${row.clicks}</td>
+                                <td>${row.conversion}</td>
+                                <td class="text-blue-600 cursor-pointer hover:text-blue-800">${row.action}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+
+            section.classList.add('fade-in');
+        }
+
+        //   ----------------------------------
+
         setTimeout(() => loadCard('card1', loadData.card1()), 1000);
         setTimeout(() => loadCard('card2', loadData.card2()), 2500);
         setTimeout(() => loadCard('card3', loadData.card3()), 2000);
         setTimeout(() => loadChart(loadData.chart()), 2500);
         setTimeout(() => loadTable(loadData.table()), 3000);
 
+
     </script>
+
+</body>
 
 </html>
