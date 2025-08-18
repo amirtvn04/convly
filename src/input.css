@@ -4,13 +4,21 @@
 @layer base {}
 
 @utility container {
-    @apply mx-auto px-7;
+    @apply mx-auto;
 }
 
 @theme {
     --font-Montserrat: Montserrat;
 
+    --color-black1: #060606;
+    --color-gray1: #F7F7F7;
+    --color-gray2: #F4F4F4;
+    --color-gray3: #E4E4E4;
+    --color-gray4: #EEEEEE;
+
     --text-40: 2.5rem;
+
+    --radius-10px: 0.625rem;
 }
 
 @layer components {
@@ -25,7 +33,7 @@
     .fade-in {
         animation: fadeIn 0.17s ease-in-out;
         -webkit-animation: fadeIn 0.17s ease-in-out;
-}
+    }
 
     @keyframes fadeIn {
         from {
@@ -38,7 +46,18 @@
     }
 
     .skeleton {
-        @apply animate-pulse bg-gray-300 rounded-sm;
+        @apply animate-pulse bg-gray-200 rounded-sm;
     }
 
+    .tab-btn {
+        @apply bg-gray2 rounded-t-xl px-5 py-2.5 cursor-pointer;
+    }
+
+    .active-tab {
+        @apply bg-white border border-b-0 border-gray3 -mb-px;
+    }
+
+    .active {
+        @apply text-white font-semibold border-b-2 border-white;
+    }
 }
